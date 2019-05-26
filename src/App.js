@@ -1,25 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
+import React from "react";
+import logo from "./logo.svg";
+import styled from "styled-components";
+import { BigTitle } from "./components/titles";
 import './App.css';
+
+const PageWrapper = styled.div`
+  position:fixed;
+  padding:0;
+  margin:0;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(315deg, #C1C8E4, #84CEEB);
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <PageWrapper>
+      <BigTitle style={{ "text-align": "center" }}>ANQI HUANG</BigTitle>
+    </PageWrapper>
   );
 }
 
