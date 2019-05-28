@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import styled from "styled-components";
 import { BigTitle } from "../components/titles";
 import PreviewSection from "../components/previewSection";
-import { Tabs, TabList, Tab, TabPanel } from "../components/tabs";
+import { StyledTabs, TabList, StyledTab, TabPanel } from "../components/tabs";
 
 const PageWrapper = styled.div`
   position:fixed;
@@ -29,22 +29,35 @@ class Home extends Component {
                     "Phone: 226-***-****",
                     "Email: a45huang@gmail.com"
                 ]
+            },
+            {
+                "title": "Experience",
+                "items": [
+                    "Software Developer at XE.com"
+                ]
             }
         ];
         return (
             <PageWrapper>
                 <BigTitle style={{ "text-align": "center" }}>ANQI HUANG</BigTitle>
-                <Tabs>
+                <StyledTabs defaultIndex={1}>
                     <TabList>
-                        <Tab>{payloads[0].title}</Tab>
+                        <StyledTab>{payloads[0].title}</StyledTab>
+                        <StyledTab>{payloads[1].title}</StyledTab>
                     </TabList>
                     <TabPanel>
                         <PreviewSection
                             title={payloads[0].title}
                             items={payloads[0].items}
                         />
+                    </TabPanel>
+                    <TabPanel>
+                        <PreviewSection
+                            title={payloads[1].title}
+                            items={payloads[1].items}
+                        />
                     </TabPanel> 
-                </Tabs>
+                </StyledTabs>
             </PageWrapper>
         );
     }
