@@ -2,7 +2,9 @@ import React, {Component} from "react";
 import styled from "styled-components";
 import { BigTitle } from "../components/titles";
 import PreviewSection from "../components/previewSection";
-import { StyledTabs, TabList, StyledTab, TabPanel } from "../components/tabs";
+import { StyledTabs, StyledTabList, StyledTab, StyledTabPanel } from "../components/tabs";
+
+import "../css/tabs.css";
 
 const PageWrapper = styled.div`
   position:fixed;
@@ -23,7 +25,7 @@ class Home extends Component {
         //TO DO: get payloads from API instead of hardcode
         let payloads = [
             {
-                "title": "Brief Introduction",
+                "title": "About Me",
                 "items": [
                     "Name: Anqi Huang",
                     "Phone: 226-***-****",
@@ -41,22 +43,22 @@ class Home extends Component {
             <PageWrapper>
                 <BigTitle style={{ "text-align": "center" }}>ANQI HUANG</BigTitle>
                 <StyledTabs defaultIndex={1}>
-                    <TabList>
+                    <StyledTabList selectedTabClassName="selectedTab">
                         <StyledTab>{payloads[0].title}</StyledTab>
                         <StyledTab>{payloads[1].title}</StyledTab>
-                    </TabList>
-                    <TabPanel>
+                    </StyledTabList>
+                    <StyledTabPanel>
                         <PreviewSection
                             title={payloads[0].title}
                             items={payloads[0].items}
                         />
-                    </TabPanel>
-                    <TabPanel>
+                    </StyledTabPanel>
+                    <StyledTabPanel>
                         <PreviewSection
                             title={payloads[1].title}
                             items={payloads[1].items}
                         />
-                    </TabPanel> 
+                    </StyledTabPanel> 
                 </StyledTabs>
             </PageWrapper>
         );
