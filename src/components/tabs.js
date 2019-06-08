@@ -14,7 +14,10 @@ const StyledTab = styled(Tab)`
     padding-left: 10px;
     border-bottom: 3px solid #A98DDD;
     border-radius: 0px 50px 50px 0px;
-    border-bottom-length: 80%;
+    &.is-selected {
+        background-color: #C1C8E4;
+        color: #ffffff;
+    }
 `;
 
 const StyledTabList = styled(TabList)`

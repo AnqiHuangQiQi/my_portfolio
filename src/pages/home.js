@@ -42,8 +42,8 @@ class Home extends Component {
         return (
             <PageWrapper>
                 <BigTitle style={{ "text-align": "center" }}>ANQI HUANG</BigTitle>
-                <StyledTabs defaultIndex={1}>
-                    <StyledTabList selectedTabClassName="selectedTab">
+                <StyledTabs defaultIndex={1} selectedTabClassName="is-selected">
+                    <StyledTabList>
                         <StyledTab>{payloads[0].title}</StyledTab>
                         <StyledTab>{payloads[1].title}</StyledTab>
                     </StyledTabList>
