@@ -12,11 +12,23 @@ const StyledTab = styled(Tab)`
     display: flex;
     align-items: center;
     padding-left: 10px;
-    border-bottom: 3px solid #A98DDD;
-    border-radius: 0px 50px 50px 0px;
+    border-bottom: 5px solid #A98DDD;
+    border-radius: 0px 15px 15px 0px;
     &.is-selected {
         background-color: #C1C8E4;
-        color: #ffffff;
+        color: #ffffff
+        border-bottom: 5px solid #A5ABC2;
+        border-radius: 0px 10px 10px 0px
+        :after {
+            content: "";
+            background-color: #C1C8E4;
+            // border-bottom: 5px solid #A5ABC2;
+            height: 50px;
+            width: 30px;
+            position: absolute;
+            left: 180px;
+            border-radius: 0px 30px 30px 0px;
+        }
     }
 `;
 
@@ -25,11 +37,22 @@ const StyledTabList = styled(TabList)`
 `;
 
 const StyledTabs = styled(Tabs)`
-    left: 180px;
+    margin-top: 50px;
 `;
 
 const StyledTabPanel = styled(TabPanel)`
-    left: 180px;
+    margin-left: 200px;
+    margin-top: -120px;
+
+    width: 70%;
+    height: 70%;
+    border: 5px solid #5AB9EA;
+    display: none;
+
+    &.is-selected {
+        display: block;
+        
+    }
 `;
 
 export {StyledTabs, StyledTabList, StyledTab, StyledTabPanel};
