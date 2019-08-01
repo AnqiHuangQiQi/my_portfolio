@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import styled from "styled-components";
 import { MedTitle } from "./titles";
+import ImageContainer from "./imageContainer";
 
 const PreviewContainer = styled.div`
 
@@ -21,6 +22,7 @@ class PreviewSection extends Component {
 
     render () {
         const { title, items } = this.props;
+        let imageUrl = this.props.imageUrl;
         let contents = null;
 
         if (items != null && items.length > 0) {
@@ -32,8 +34,10 @@ class PreviewSection extends Component {
                 </OrderedList>
             );
         }
+
         return (
             <PreviewContainer>
+                { imageUrl && <ImageContainer src={imageUrl} />}
                 <MedTitle>{title}</MedTitle>
                 {contents}
             </PreviewContainer>

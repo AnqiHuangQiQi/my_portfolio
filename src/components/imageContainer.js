@@ -1,7 +1,10 @@
+import React from "react";
 import styled from "styled-components";
 
 const StyledImage = styled.img`
-
+    float: left;
+    width: 40%;
+    margin: 22px 30px;
 `;
 
 const ImageContainer = (props) => {

@@ -14,7 +14,7 @@ const PageWrapper = styled.div`
   left:0;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(315deg, #C1C8E4, #84CEEB);
+  background-image: linear-gradient(-220deg, #5AB9EA, #5680E9 65%, #5AB9EA 15%);
 `;
 
 class Home extends Component {
@@ -30,13 +30,15 @@ class Home extends Component {
                     "Name: Anqi Huang",
                     "Phone: 226-***-****",
                     "Email: a45huang@gmail.com"
-                ]
+                ],
+                "imageUrl": "https://anqiportfolioimages.s3.amazonaws.com/images/flight_simul.jpg"
             },
             {
                 "title": "Experience",
                 "items": [
                     "Software Developer at XE.com"
-                ]
+                ],
+                "imageUrl": "https://anqiportfolioimages.s3.amazonaws.com/images/xe_picture.jpeg"
             }
         ];
         return (
@@ -51,12 +53,14 @@ class Home extends Component {
                         <PreviewSection
                             title={payloads[0].title}
                             items={payloads[0].items}
+                            imageUrl={payloads[0].imageUrl}
                         />
                     </StyledTabPanel>
                     <StyledTabPanel>
                         <PreviewSection
                             title={payloads[1].title}
                             items={payloads[1].items}
+                            imageUrl={payloads[1].imageUrl}
                         />
                     </StyledTabPanel> 
                 </StyledTabs>

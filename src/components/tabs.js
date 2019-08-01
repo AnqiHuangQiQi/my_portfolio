@@ -46,12 +46,16 @@ const StyledTabPanel = styled(TabPanel)`
 
     width: 70%;
     height: 70%;
-    border: 5px solid #5AB9EA;
+    background: linear-gradient(33deg, #DFEDFF 50%, #84CEEB 50%);
     display: none;
+    height: 400px;
+    border-color: #FFFFFF;
+    border-style: solid;
+    border-width: 10px 10px 50px 10px;
+    box-shadow: 5px 10px #C1C8E4;
 
     &.is-selected {
         display: block;
-        
     }
 `;
 
