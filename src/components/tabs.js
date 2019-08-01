@@ -4,6 +4,7 @@ import { Tabs, TabList, Tab, TabPanel } from "react-tabs";
 const StyledTab = styled(Tab)`
     background-color: #8860D0;
     color: #C1C8E4;
+    cursor: pointer;
     width: 180px;
     height: 50px;
     list-style-type: none;
