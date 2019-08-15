@@ -43,7 +43,7 @@ const StyledTabs = styled(Tabs)`
 
 const StyledTabPanel = styled(TabPanel)`
     margin-left: 200px;
-    margin-top: -180px;
+    margin-top: ${props => props.numOfCategories ? `${-props.numOfCategories*50 - 30}px` : "-120px"};
 
     position: absolute;
     width: 70%;

@@ -46,9 +46,18 @@ class Home extends Component {
                     "Master of Engineering Degree",
                     "University of Waterloo"
                 ],
+                "imageUrl": "https://anqiportfolioimages.s3.amazonaws.com/images/graduate_picture.jpg"
+            },
+            {
+                "title": "Education",
+                "items": [
+                    "Master of Engineering Degree",
+                    "University of Waterloo"
+                ],
                 "imageUrl": "https://anqiportfolioimages.s3.amazonaws.com/images/xe_picture.jpeg"
             }
         ];
+        let numOfCategories = payloads.length;
         return (
             <PageWrapper>
                 <BigTitle style={{ "text-align": "center" }}>ANQI HUANG</BigTitle>
@@ -59,7 +68,7 @@ class Home extends Component {
                         )}
                     </StyledTabList>
                     {payloads.map(category => 
-                        <StyledTabPanel>
+                        <StyledTabPanel numOfCategories={numOfCategories}>
                             <PreviewSection
                                 title={category.title}
                                 items={category.items}
