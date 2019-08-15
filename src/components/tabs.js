@@ -43,8 +43,9 @@ const StyledTabs = styled(Tabs)`
 
 const StyledTabPanel = styled(TabPanel)`
     margin-left: 200px;
-    margin-top: -120px;
+    margin-top: -180px;
 
+    position: absolute;
     width: 70%;
     height: 70%;
     background: linear-gradient(33deg, #DFEDFF 50%, #84CEEB 50%);

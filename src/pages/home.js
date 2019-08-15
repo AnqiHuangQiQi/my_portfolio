@@ -39,6 +39,14 @@ class Home extends Component {
                     "Software Developer at XE.com"
                 ],
                 "imageUrl": "https://anqiportfolioimages.s3.amazonaws.com/images/xe_picture.jpeg"
+            },
+            {
+                "title": "Education",
+                "items": [
+                    "Master of Engineering Degree",
+                    "University of Waterloo"
+                ],
+                "imageUrl": "https://anqiportfolioimages.s3.amazonaws.com/images/xe_picture.jpeg"
             }
         ];
         return (
@@ -46,23 +54,19 @@ class Home extends Component {
                 <BigTitle style={{ "text-align": "center" }}>ANQI HUANG</BigTitle>
                 <StyledTabs defaultIndex={0} selectedTabClassName="is-selected" selectedTabPanelClassName="is-selected">
                     <StyledTabList>
-                        <StyledTab>{payloads[0].title}</StyledTab>
-                        <StyledTab>{payloads[1].title}</StyledTab>
+                        {payloads.map(category => 
+                            <StyledTab>{category.title}</StyledTab>
+                        )}
                     </StyledTabList>
-                    <StyledTabPanel>
-                        <PreviewSection
-                            title={payloads[0].title}
-                            items={payloads[0].items}
-                            imageUrl={payloads[0].imageUrl}
-                        />
-                    </StyledTabPanel>
-                    <StyledTabPanel>
-                        <PreviewSection
-                            title={payloads[1].title}
-                            items={payloads[1].items}
-                            imageUrl={payloads[1].imageUrl}
-                        />
-                    </StyledTabPanel> 
+                    {payloads.map(category => 
+                        <StyledTabPanel>
+                            <PreviewSection
+                                title={category.title}
+                                items={category.items}
+                                imageUrl={category.imageUrl}
+                            />
+                        </StyledTabPanel>
+                    )}
                 </StyledTabs>
             </PageWrapper>
         );
