@@ -5,7 +5,8 @@ const BigTitle = styled.h1`
 `;
 
 const MedTitle = styled.h2`
-
+    colot: #FFFFFF;
+    text-align: right;
 `;
 
 const SmallTitle = styled.h3`

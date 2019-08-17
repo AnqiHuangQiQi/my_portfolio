@@ -60,15 +60,15 @@ class Home extends Component {
         let numOfCategories = payloads.length;
         return (
             <PageWrapper>
-                <BigTitle style={{ "text-align": "center" }}>ANQI HUANG</BigTitle>
+                <BigTitle style={{ "textAlign": "center" }}>ANQI HUANG</BigTitle>
                 <StyledTabs defaultIndex={0} selectedTabClassName="is-selected" selectedTabPanelClassName="is-selected">
                     <StyledTabList>
-                        {payloads.map(category => 
-                            <StyledTab>{category.title}</StyledTab>
+                        {payloads.map((category, index) => 
+                            <StyledTab key={index}>{category.title}</StyledTab>
                         )}
                     </StyledTabList>
-                    {payloads.map(category => 
-                        <StyledTabPanel numOfCategories={numOfCategories}>
+                    {payloads.map((category, index) => 
+                        <StyledTabPanel numofcategories={numOfCategories} key={index}>
                             <PreviewSection
                                 title={category.title}
                                 items={category.items}

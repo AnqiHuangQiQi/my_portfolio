@@ -12,7 +12,14 @@ const OrderedList = styled.ol`
 `;
 
 const ListItem = styled.li`
-
+    list-style: none;
+    :before {
+        content: "•"; 
+        color: red;
+        display: inline-block; 
+        width: 1em;
+        margin-left: -1em;
+    }
 `;
 
 class PreviewSection extends Component {
@@ -38,8 +45,10 @@ class PreviewSection extends Component {
         return (
             <PreviewContainer>
                 { imageUrl && <ImageContainer src={imageUrl} />}
-                <MedTitle>{title}</MedTitle>
-                {contents}
+                <div style={{ "float": "right", "marginRight": "20px" }}>
+                    <MedTitle>{title}</MedTitle>
+                    {contents}
+                </div>
             </PreviewContainer>
         );
     }
