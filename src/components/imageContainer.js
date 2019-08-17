@@ -3,9 +3,10 @@ import styled from "styled-components";
 
 const StyledImage = styled.img`
     float: left;
+    height: 60%;
     width: 40%;
-    height: 80%
-    margin: 22px 30px;
+    overflow-y: hidden;
+    margin: 0px 20px;
 `;
 
 const ImageContainer = (props) => {
