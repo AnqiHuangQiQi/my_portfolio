@@ -47,6 +47,7 @@ const StyledTabPanel = styled(TabPanel)`
 
     position: absolute;
     width: 70%;
+    max-width: 720px;
     height: 60%;
     background: linear-gradient(33deg, #DFEDFF 50%, #84CEEB 50%);
     display: none;
