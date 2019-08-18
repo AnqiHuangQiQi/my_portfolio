@@ -14,7 +14,7 @@ const ImageContainer = (props) => {
     return (
         <div style={{ 
             "width": "40%",
-            "height": "70%",
+            "height": "75%",
             "position": "absolute",
             "margin": "20px 20px"
         }}>
