@@ -5,12 +5,13 @@ const BigTitle = styled.h1`
 `;
 
 const MedTitle = styled.h2`
-    colot: #FFFFFF;
+    color: #FFFFFF;
     text-align: right;
 `;
 
 const SmallTitle = styled.h3`
-
+    color: #FFFFFF;
+    margin-bottom: 0;
 `;
 
 

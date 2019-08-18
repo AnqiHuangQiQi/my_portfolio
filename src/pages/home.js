@@ -27,34 +27,61 @@ class Home extends Component {
             {
                 "title": "About Me",
                 "items": [
-                    "Name: Anqi Huang",
-                    "Phone: 226-***-****",
-                    "Email: a45huang@gmail.com"
+                    "Name - Anqi Huang",
+                    "Hobbies - Dance, Workout, Swim, Travel, Paint, Try new things",
+                    {
+                        "Tech Stack" : [
+                            "Java, PHP, Javascript, React, Node, python, SQL",
+                            "Web Development",
+                            "AWS, Apache, MySQL"
+                        ]
+                    },
+                    {
+                        "Contact Information" : [
+                            "Email - a45huang@gmail.com",
+                            "Linkedin - https://www.linkedin.com/in/anqi-huang-113698103/"
+                        ]
+                    }
                 ],
                 "imageUrl": "https://anqiportfolioimages.s3.amazonaws.com/images/flight_simul.jpg"
             },
             {
                 "title": "Experience",
                 "items": [
-                    "Software Developer at XE.com"
+                    {
+                        "Software Developer at XE.com": [
+                            "Time - From 2017 May to Present",
+                            "Product - https://www.xe.com",
+                            "Develop, maintain and enhance our web app",
+                            "Respect security and privacy issues",
+                            "Ensure components scalable and maintainable",
+                            "Communicate technical problems and solutions"
+                        ]
+                    }
                 ],
                 "imageUrl": "https://anqiportfolioimages.s3.amazonaws.com/images/xe_picture.jpeg"
             },
             {
                 "title": "Education",
                 "items": [
-                    "Master of Engineering Degree",
-                    "University of Waterloo"
+                    {
+                        "Master of Engineering" : [
+                            "University of Waterloo   2015/09 - 2017/06",
+                            "Major - Electrical & Computer Engineering",
+                            "GPA - 92.75/100",
+                            "Link - https://uwaterloo.ca/"
+                        ]
+                    },
+                    {
+                        "Bachelor of Engineering" : [
+                            "Nanjing University of Aeronautics and Astronautics   2011/09 - 2015/06",
+                            "Major - Electrical Engineering & Automation",
+                            "GPA - 3.9/5.0",
+                            "Link - http://iao.nuaa.edu.cn/"
+                        ]
+                    }
                 ],
                 "imageUrl": "https://anqiportfolioimages.s3.amazonaws.com/images/graduate_picture.jpg"
-            },
-            {
-                "title": "Education",
-                "items": [
-                    "Master of Engineering Degree",
-                    "University of Waterloo"
-                ],
-                "imageUrl": "https://anqiportfolioimages.s3.amazonaws.com/images/xe_picture.jpeg"
             }
         ];
         let numOfCategories = payloads.length;
